@@ -189,48 +189,6 @@ function enforceAuthentication(){
     }
 }
 
-function initializeVisitorCounter(){
-    const brand = document.querySelector(".site-brand, .nav-logo");
-    if(!brand){
-        return;
-    }
-
-    let visitCount = Number(localStorage.getItem("budgetbasicsBrowserVisits"));
-    if(!Number.isSafeInteger(visitCount) || visitCount < 0){
-        visitCount = 0;
-    }
-    if(sessionStorage.getItem("budgetbasicsVisitRecorded") !== "true"){
-        visitCount++;
-        localStorage.setItem("budgetbasicsBrowserVisits",String(visitCount));
-        sessionStorage.setItem("budgetbasicsVisitRecorded","true");
-    }
-
-    let counter = brand.querySelector(".visit-counter");
-    if(!counter){
-        counter = document.createElement("span");
-        counter.className = "visit-counter";
-        counter.setAttribute("role","img");
-        const eye = document.createElementNS("http://www.w3.org/2000/svg","svg");
-        eye.setAttribute("viewBox","0 0 24 24");
-        eye.setAttribute("aria-hidden","true");
-        eye.setAttribute("focusable","false");
-        const outline = document.createElementNS("http://www.w3.org/2000/svg","path");
-        outline.setAttribute("d","M2.5 12s3.4-6 9.5-6 9.5 6 9.5 6-3.4 6-9.5 6-9.5-6-9.5-6Z");
-        const pupil = document.createElementNS("http://www.w3.org/2000/svg","circle");
-        pupil.setAttribute("cx","12");
-        pupil.setAttribute("cy","12");
-        pupil.setAttribute("r","2.5");
-        eye.append(outline,pupil);
-        const number = document.createElement("span");
-        number.className = "visit-counter-value";
-        counter.append(eye,number);
-        brand.appendChild(counter);
-    }
-    counter.querySelector(".visit-counter-value").textContent = visitCount.toLocaleString();
-    counter.setAttribute("aria-label","Browser visits: " + visitCount);
-    counter.title = "Visits recorded in this browser only";
-}
-
 function initializeResourceLibrary(){
     const search = document.getElementById("resource-search");
     const category = document.getElementById("resource-category");
@@ -338,7 +296,6 @@ function initializeAssistant(){
 }
 
 enforceAuthentication();
-initializeVisitorCounter();
 initializeNavigation();
 initializeSavingsCalculator();
 initializeExpensePlanner();
