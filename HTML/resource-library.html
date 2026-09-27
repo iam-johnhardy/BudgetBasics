@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Search and filter BudgetBasics lessons and planning tools.">
+  <title>Explore Resources | BudgetBasics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <script src="../site.js?v=browser-visits-1" defer></script>
+</head>
+<body data-requires-auth="true">
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-brand" href="landing.html" aria-label="BudgetBasics dashboard"><span class="brand-mark" aria-hidden="true">₦</span>Budget<span>Basics</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation"><span></span><span></span><span></span></button>
+      <nav class="site-navigation" id="site-navigation" aria-label="Main navigation">
+        <details><summary>Learn Budgeting</summary><div class="nav-submenu">
+          <a href="learn-budgeting.html">Learning overview</a><a href="budgeting-basics.html">Budgeting Basics</a><a href="savings-goals.html">Savings Goals</a><a href="needs-vs-wants.html">Needs vs Wants</a><a href="expense-planner.html">Expense Planner</a><a href="money-mistakes.html">Money Mistakes</a>
+        </div></details>
+        <details><summary>Practice Planning</summary><div class="nav-submenu"><a href="savings-goals.html">Savings Goals</a><a href="expense-planner.html">Expense Planner</a></div></details>
+        <details><summary>Explore Resources</summary><div class="nav-submenu">
+          <a href="money-mistakes.html">Money Mistakes</a><a href="needs-vs-wants.html">Needs vs Wants</a><a href="infographics-gallery.html">Infographics &amp; Learning Gallery</a><a href="resource-library.html" aria-current="page">Search, Sort &amp; Filter</a>
+        </div></details>
+        <a href="ai-assistant.html">AI Q&amp;A Assistant</a><a href="about.html">About Us</a>
+      </nav>
+    </div>
+  </header>
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="landing.html">Dashboard</a></li>
+      <li aria-current="page">Explore Resources</li>
+    </ol>
+  </nav>
+  <main>
+    <section class="module-hero">
+      <p class="eyebrow">Explore Resources</p>
+      <h1>Find a useful next step</h1>
+      <p>Search lessons and tools, narrow the list by type, or sort it by name.</p>
+    </section>
+    <section class="module-content resource-library" aria-labelledby="resources-heading">
+      <h2 class="sr-only" id="resources-heading">Lessons and planning tools</h2>
+      <div class="resource-controls">
+        <div class="resource-search-field">
+          <label for="resource-search">Search resources</label>
+          <input id="resource-search" type="search" placeholder="Try savings, spending, or budget">
+        </div>
+        <div>
+          <label for="resource-category">Category</label>
+          <select id="resource-category">
+            <option value="all">All categories</option>
+            <option value="learn">Learning</option>
+            <option value="plan">Planning tools</option>
+            <option value="spend">Spending choices</option>
+            <option value="about">About BudgetBasics</option>
+          </select>
+        </div>
+        <div>
+          <label for="resource-sort">Sort</label>
+          <select id="resource-sort">
+            <option value="title-asc">Name: A to Z</option>
+            <option value="title-desc">Name: Z to A</option>
+          </select>
+        </div>
+        <button class="resource-reset" id="resource-reset" type="button">Reset filters</button>
+      </div>
+      <p class="resource-count" id="resource-count" aria-live="polite"></p>
+      <div class="resource-grid" id="resource-results">
+        <article class="resource-card" data-resource-card data-category="learn"><p class="eyebrow">Learning</p><h3>Budgeting Basics</h3><p>Understand income, fixed and variable costs, and how to make a monthly plan.</p><a class="learn-link" href="budgeting-basics.html">Open lesson <span aria-hidden="true">&#8594;</span></a></article>
+        <article class="resource-card" data-resource-card data-category="plan"><p class="eyebrow">Planning tools</p><h3>Expense Planner</h3><p>Organize planned costs and compare them with your available budget.</p><a class="learn-link" href="expense-planner.html">Open tool <span aria-hidden="true">&#8594;</span></a></article>
+        <article class="resource-card" data-resource-card data-category="learn"><p class="eyebrow">Learning</p><h3>Infographics &amp; Learning Gallery</h3><p>Review visual guides to budgeting, savings, spending, and planning ahead.</p><a class="learn-link" href="infographics-gallery.html">Open gallery <span aria-hidden="true">&#8594;</span></a></article>
+        <article class="resource-card" data-resource-card data-category="spend"><p class="eyebrow">Spending choices</p><h3>Money Mistakes</h3><p>Explore common money missteps and practical ways to strengthen a plan.</p><a class="learn-link" href="money-mistakes.html">Open lesson <span aria-hidden="true">&#8594;</span></a></article>
+        <article class="resource-card" data-resource-card data-category="spend"><p class="eyebrow">Spending choices</p><h3>Needs vs Wants</h3><p>Practice distinguishing essential costs from optional purchases.</p><a class="learn-link" href="needs-vs-wants.html">Open lesson <span aria-hidden="true">&#8594;</span></a></article>
+        <article class="resource-card" data-resource-card data-category="plan"><p class="eyebrow">Planning tools</p><h3>Savings Goals</h3><p>Estimate how regular contributions could help you reach a savings target.</p><a class="learn-link" href="savings-goals.html">Open tool <span aria-hidden="true">&#8594;</span></a></article>
+        <article class="resource-card" data-resource-card data-category="learn"><p class="eyebrow">Learning</p><h3>Learning Overview</h3><p>Browse all five beginner-friendly guides in one place.</p><a class="learn-link" href="learn-budgeting.html">Browse lessons <span aria-hidden="true">&#8594;</span></a></article>
+        <article class="resource-card" data-resource-card data-category="about"><p class="eyebrow">About</p><h3>About BudgetBasics</h3><p>Learn about the site’s educational purpose, approach, and limitations.</p><a class="learn-link" href="about.html">About the site <span aria-hidden="true">&#8594;</span></a></article>
+      </div>
+      <p class="resource-empty" id="resource-empty" hidden>No matching resources. Try a different term or reset the filters.</p>
+    </section>
+  </main>
+</body>
+</html>

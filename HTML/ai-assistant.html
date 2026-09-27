@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ask beginner questions about budgeting, spending, savings goals, and expenses.">
+  <title>AI Q&amp;A Assistant | BudgetBasics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <script src="../site.js?v=browser-visits-1" defer></script>
+</head>
+<body data-requires-auth="true">
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-brand" href="landing.html" aria-label="BudgetBasics dashboard"><span class="brand-mark" aria-hidden="true">₦</span>Budget<span>Basics</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation"><span></span><span></span><span></span></button>
+      <nav class="site-navigation" id="site-navigation" aria-label="Main navigation">
+        <details><summary>Learn Budgeting</summary><div class="nav-submenu">
+          <a href="learn-budgeting.html">Learning overview</a><a href="budgeting-basics.html">Budgeting Basics</a><a href="savings-goals.html">Savings Goals</a><a href="needs-vs-wants.html">Needs vs Wants</a><a href="expense-planner.html">Expense Planner</a><a href="money-mistakes.html">Money Mistakes</a>
+        </div></details>
+        <details><summary>Practice Planning</summary><div class="nav-submenu"><a href="savings-goals.html">Savings Goals</a><a href="expense-planner.html">Expense Planner</a></div></details>
+        <details><summary>Explore Resources</summary><div class="nav-submenu">
+          <a href="money-mistakes.html">Money Mistakes</a><a href="needs-vs-wants.html">Needs vs Wants</a><a href="infographics-gallery.html">Infographics &amp; Learning Gallery</a><a href="resource-library.html">Search, Sort &amp; Filter</a>
+        </div></details>
+        <a href="ai-assistant.html" aria-current="page">AI Q&amp;A Assistant</a><a href="about.html">About Us</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="module-hero">
+      <p class="eyebrow">Get Help / Connect</p>
+      <h1>AI Q&amp;A Assistant</h1>
+      <p>Ask a beginner question about budgeting, savings goals, spending choices, or planning expenses.</p>
+    </section>
+    <section class="module-content assistant-page">
+      <div class="assistant-layout">
+        <section class="assistant-tool" aria-label="Ask a money question">
+          <div class="assistant-conversation" id="assistant-conversation" aria-live="polite" aria-relevant="additions text">
+            <p class="assistant-message assistant">Hi. I can help with basic budgeting, savings, expenses, and needs-versus-wants questions.</p>
+          </div>
+          <form class="assistant-form" id="assistant-form">
+            <label for="assistant-question">Your question</label>
+            <div class="assistant-input-row">
+              <input id="assistant-question" name="question" type="text" placeholder="How do I start a budget?" maxlength="500" required>
+              <button class="primary-button" type="submit">Ask</button>
+            </div>
+          </form>
+        </section>
+        <aside class="assistant-aside">
+          <p class="eyebrow">Try a question</p>
+          <h2>Start with a topic</h2>
+          <div class="assistant-prompts">
+            <button type="button" data-assistant-question="How do I start a budget?">How do I start a budget?</button>
+            <button type="button" data-assistant-question="How can I save consistently?">How can I save consistently?</button>
+            <button type="button" data-assistant-question="How do I tell needs from wants?">How do I tell needs from wants?</button>
+            <button type="button" data-assistant-question="How should I plan upcoming expenses?">How should I plan upcoming expenses?</button>
+          </div>
+          <p class="assistant-disclaimer">Answers use built-in educational guidance, not a live AI service. They are general information, not personalized financial advice.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

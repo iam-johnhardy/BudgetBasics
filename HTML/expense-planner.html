@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Planner | BudgetBasics</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../site.js?v=browser-visits-1" defer></script>
+</head>
+
+<body data-requires-auth="true">
+    <header class="site-header">
+        <div class="header-inner"><a class="site-brand" href="landing.html" aria-label="BudgetBasics dashboard"><span class="brand-mark" aria-hidden="true">₦</span>Budget<span>Basics</span></a><button
+                class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation"
+                aria-label="Open navigation"><span></span><span></span><span></span></button>
+            <nav class="site-navigation" id="site-navigation" aria-label="Main navigation">
+                <details><summary>Learn Budgeting</summary><div class="nav-submenu">
+                    <a href="learn-budgeting.html">Learning overview</a><a href="budgeting-basics.html">Budgeting Basics</a>
+                    <a href="savings-goals.html">Savings Goals</a><a href="needs-vs-wants.html">Needs vs Wants</a>
+                    <a class="active" href="expense-planner.html" aria-current="page">Expense Planner</a>
+                    <a href="money-mistakes.html">Money Mistakes</a>
+                </div></details>
+                <details><summary>Practice Planning</summary><div class="nav-submenu">
+                    <a href="savings-goals.html">Savings Goals</a><a class="active" href="expense-planner.html" aria-current="page">Expense Planner</a>
+                </div></details>
+                <details><summary>Explore Resources</summary><div class="nav-submenu">
+                    <a href="money-mistakes.html">Money Mistakes</a><a href="needs-vs-wants.html">Needs vs Wants</a>
+                    <a href="infographics-gallery.html">Infographics &amp; Learning Gallery</a>
+                    <a href="resource-library.html">Search, Sort &amp; Filter</a>
+                </div></details>
+                <a href="ai-assistant.html">AI Q&amp;A Assistant</a><a href="about.html">About Us</a>
+            </nav>
+        </div>
+    </header>
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+            <li><a href="landing.html">Dashboard</a></li>
+            <li><a href="landing.html#topics">Practice Planning</a></li>
+            <li aria-current="page">Expense Planner</li>
+        </ol>
+    </nav>
+    <main class="module-page">
+        <section class="module-hero">
+            <p class="eyebrow">Module 04</p>
+            <h1>Expense Planner</h1>
+            <p>Map out upcoming costs so your plan reflects real life, not surprises.</p>
+        </section>
+        <section class="module-content">
+            <div class="tool-layout">
+                <form class="tool-card" id="expense-form">
+                    <p class="eyebrow">Add an expense</p>
+                    <h2>Plan a cost</h2><label for="expense-date">Date</label><input id="expense-date" type="date"
+                        required><label for="expense-category">Category</label><select id="expense-category">
+                        <option>Food</option>
+                        <option>Transport</option>
+                        <option>Education</option>
+                        <option>Entertainment</option>
+                        <option>Shopping</option>
+                        <option>Utilities</option>
+                        <option>Miscellaneous</option>
+                    </select><label for="expense-description">Description</label><input id="expense-description"
+                        type="text" placeholder="Textbooks" required><label for="expense-amount">Amount</label><input
+                        id="expense-amount" type="number" min="0.01" step="0.01" placeholder="45.00" required><button
+                        class="primary-button" type="submit">Add expense</button>
+                    <p class="form-error" id="expense-error" aria-live="polite"></p>
+                </form>
+                <div class="table-wrap expense-list">
+                    <div class="list-heading">
+                        <div>
+                            <p class="eyebrow">This session</p>
+                            <h2>Planned expenses</h2>
+                        </div><strong id="expense-total">Total: $0.00</strong>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Category</th>
+                                <th>Description</th>
+                                <th>Amount</th>
+                                <th><span class="sr-only">Actions</span></th>
+                            </tr>
+                        </thead>
+                        <tbody id="expense-rows">
+                            <tr class="empty-row">
+                                <td colspan="5">No expenses added yet.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="balance-note">Available budget: <strong id="expense-budget">₦1,200</strong> &middot; Remaining:
+                        <strong id="expense-remaining">₦1,200</strong></p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
