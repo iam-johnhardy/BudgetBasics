@@ -190,10 +190,6 @@ function enforceAuthentication(){
 }
 
 function initializeVisitorCounter(){
-    if(document.body.dataset.requiresAuth !== "true" || localStorage.getItem("budgetbasicsLoggedIn") !== "true"){
-        return;
-    }
-
     const brand = document.querySelector(".site-brand, .nav-logo");
     if(!brand){
         return;
